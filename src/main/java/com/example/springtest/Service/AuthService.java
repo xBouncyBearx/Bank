@@ -75,7 +75,7 @@ public class AuthService {
             return "Account not found";
         }
 
-        if(passwordEncoder.matches("string" , account.getPassword())){
+        if(!passwordEncoder.matches("string" , account.getPassword())){
             return "Wrong Password";
         }
 
